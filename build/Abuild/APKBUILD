@@ -3,7 +3,7 @@
 # Maintainer: Aaron Bassett <abassett@qnx.com>
 pkgname=tree-sitter-markdown
 pkgver=0.5.1
-pkgrel=2
+pkgrel=${pkgrel:-0}
 pkgdesc="A markdown grammar for tree-sitter"
 url="https://github.com/tree-sitter-grammars/tree-sitter-markdown"
 arch="all"
@@ -36,6 +36,7 @@ package() {
 }
 
 
+options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 52356a5bb9d6b224922d34e64b8ea8d37bd9db51f3ef61b11a1da1d01e9a44f3bd4e1367e7eb8d7c2c4bcc62939c573999ce0e0382ab56b24b6db82cc91e70ec  tree-sitter-markdown-0.5.1.tar.gz
 "
